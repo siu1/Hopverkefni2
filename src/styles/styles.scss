@@ -24,4 +24,11 @@ img { /* stylelint-disable-line */
   max-width: 100%;
 }
 
+h1 { /* stylelint-disable-line */
+  margin: $gutter 0;
+  color: #fff;
+  text-align: center;
+  font-family: $font-headers;
+}
+
 // TODO import
