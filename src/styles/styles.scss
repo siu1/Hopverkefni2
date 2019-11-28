@@ -37,7 +37,10 @@ main { /* stylelint-disable-line */
   max-width: 1200px;
   margin: 0 auto;
 
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
 }
 
 p{
