@@ -34,7 +34,7 @@ function load(data) {
         secondHeading.classList.add('heading', 'heading__size2');
         secondHeading.textContent = obj.title;
 
-        const ourCard = el(ourCard, ourThumbnail, firstHeading, secondHeading);
+        const ourCard = el('a', ourThumbnail, firstHeading, secondHeading);
         ourCard.href = 'fyrirlestur.html?slug='.concat(obj.slug);
         ourCard.classList.add('lecturebox');
         mainDocument.appendChild(ourCard);

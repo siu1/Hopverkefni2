@@ -1,8 +1,8 @@
 @import "config";
 
 .lecturebox {
-    width: 100%;
-    max-width: 375px;
+    width: ($max-width + $gutter)/3 - $gutter;
+    max-width: 100%;
     margin-bottom: $gutter;
     margin-top: $gutter;
     align-content: left;
