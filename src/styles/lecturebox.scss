@@ -2,10 +2,11 @@
 
 .lecturebox {
     width: 100%;
-    max-width: 400px;
+    max-width: 375px;
     margin-bottom: $gutter;
     margin-top: $gutter;
     align-content: left;
+    margin: $gutter/2;
 
     background-color: #ccc;
 
