@@ -26,9 +26,14 @@ img { /* stylelint-disable-line */
 
 h1 { /* stylelint-disable-line */
   margin: $gutter 0;
-  color: #fff;
+  color: #000;
   text-align: center;
   font-family: $font-headers;
+}
+
+p{
+  color: #000;
+  text-align: center;
 }
 
 @import "button";
