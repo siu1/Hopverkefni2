@@ -34,7 +34,7 @@ h1 { /* stylelint-disable-line */
 main { /* stylelint-disable-line */
   display: flex;
 
-  max-width: 1200px;
+  max-width: $max-width + $gutter;
   margin: 0 auto;
 
   flex-direction: row;
