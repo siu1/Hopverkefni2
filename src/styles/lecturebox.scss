@@ -1,0 +1,15 @@
+@import "config";
+
+.lecturebox {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: $gutter;
+    margin-top: $gutter;
+    align-content: left;
+
+    background-color: #ccc;
+
+    &__image {
+      width: 100%;
+    }
+}

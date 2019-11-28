@@ -31,10 +31,21 @@ h1 { /* stylelint-disable-line */
   font-family: $font-headers;
 }
 
+main { /* stylelint-disable-line */
+  display: flex;
+
+  max-width: 1200px;
+  margin: 0 auto;
+
+  flex-direction: column;
+}
+
 p{
   color: #000;
   text-align: center;
 }
 
 @import "button";
+@import "lecturebox";
+@import "heading";
 // TODO import
