@@ -1,0 +1,17 @@
+@import "config";
+
+
+.head{
+    height: 300px;
+    background-image: url("../img/header.jpg");
+    background-color: #ccc;
+    
+    display: flex;
+
+    font-size: 1.5rem;
+    text-align: center;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
