@@ -2,7 +2,7 @@
 
 .lecture-page{
     display: flex;
-    max-width: 600px;
+    max-width: ($max-width + $gutter)*2/3 + $gutter;
     margin: 0 auto;
     flex-direction: row;
     flex-wrap: wrap;
@@ -13,17 +13,20 @@
         width:100%;
         height:0;
         padding-bottom: 56.25%;
-        margin-bottom: $gutter * 2;
+        margin: $gutter;
     }
     &__text{
         margin-bottom: $gutter * 2;
+        margin-top: $gutter * 2;
+        margin-right: $gutter;
+        margin-left: $gutter;
     }
     &__quote{
         background-color: #ccc;
-        width: 620px;
+        width: 100%;
         margin-bottom: $gutter * 2;
         &__text{
-            margin: $gutter * 0.5;
+            margin: $gutter;
         }
     }   
     &__image{

@@ -59,7 +59,6 @@ function load(data) {
               ourThumbnail.src = obj.thumbnail;
               ourThumbnail.classList.add('lecturebox__image');
             } else {
-              //ourThumbnail.src = "img/thumb9.jpg";
               ourThumbnail.classList.add('lecturebox__fakeImage');  
             }
 
@@ -116,7 +115,7 @@ export function readLecture(data) {
         head.style.backgroundImage = 'url("../'.concat(data.image,'")');
     }
 
-    const headCategory = el('p', data.category);
+    const headCategory = el('p', data.category.toUpperCase());
     headCategory.classList.add("heading__size1");
     head.appendChild(headCategory);
 }
