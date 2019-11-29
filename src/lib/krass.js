@@ -7,33 +7,33 @@ Data.forEach((obj) => {//fyrir content
             //ekki viss hvernig eg set src og allt bullið hingað inn      
         }
         else if(obj.type === "text"){
-            conts txtData = documnet.createElement('p');
+            conts txtData = document.createElement('p');
             txtData.classList.add(lecture-page__text);
             //ehv fall sem skoðar hvort það komi fyrir /n 
         }
         else if(obj.type === "quote"){
-            conts quoteData = documnet.createElement('div');
+            conts quoteData = document.createElement('div');
             quoteData.classList.add(lecture-page__quote);
             const quoteText = document.createElement('p');
             quoteText.classList.add(lecture-page__quote__text);
             quoteText.textContent = obj.data;
         }
         else if(obj.type === "image"){
-            conts imgData = documnet.createElement('div');
+            conts imgData = document.createElement('div');
             imgData.classList.add(lecture-page__image);
             //ehv til að sja hvaða mynd
             if(selected.includes(obj.caption)){
-                const imgCaption = documnet.createElement('p');
+                const imgCaption = document.createElement('p');
                 imgCaption.textContent = obj.caption;
             }
         }
         else if(obj.type === "heading"){
-            conts headingData = documnet.createElement('h2');
+            conts headingData = document.createElement('h2');
             headingData.classList.add(lecture-page__heading);
             headingData.textContent = obj.data;
         }
         else if(obj.type === "list"){
-            conts listData = documnet.createElement('ul');
+            conts listData = document.createElement('ul');
             headingData.classList.add(lecture-page__list);
             forEach(obj){//í listanum
                 const listText = document.createElement('li');
@@ -41,7 +41,7 @@ Data.forEach((obj) => {//fyrir content
             }
         }
         else if(obj.type === "code"){
-            conts codeData = documnet.createElement('div');
+            conts codeData = document.createElement('div');
             headingData.classList.add(lecture-page__code);
             const codeText = document.createElement('p');
             //ehv til að fara i nyja linu

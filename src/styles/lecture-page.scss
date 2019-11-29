@@ -16,32 +16,35 @@
         margin: $gutter;
     }
     &__text{
-        margin-bottom: $gutter * 2;
-        margin-top: $gutter * 2;
-        margin-right: $gutter;
-        margin-left: $gutter;
+        margin: $gutter;
     }
     &__quote{
         background-color: #ccc;
         width: 100%;
-        margin-bottom: $gutter * 2;
+        margin-bottom: $gutter;
         &__text{
             margin: $gutter;
         }
     }   
     &__image{
         width: 100%;
-        margin-bottom: $gutter * 2;
+        margin: $gutter;
     }
     &__heading{
-        margin-bottom: $gutter * 2;
+        margin: $gutter;
+        width: 100%;
+        font-family: $font-headers;
     }
     &__list{
         list-style-position: outside;
         margin-bottom: $gutter * 2;
+        margin: $gutter;
     }
     &__code{
-        font-family: monospace;
+        font-family: $font-headers;
+        font-weight:bold;
         white-space: pre-wrap;
+        margin: $gutter;
+        width: 100%;
     }
 }

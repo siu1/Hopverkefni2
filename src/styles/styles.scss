@@ -46,6 +46,7 @@ main { /* stylelint-disable-line */
 
 p{
   color: #000;
+  line-height: 32px;
 }
 
 a {
@@ -58,6 +59,11 @@ iframe {
   left:0;
   width: 100%;
   height: 100%;
+}
+
+li {
+  margin-bottom: $gutter/2;
+  margin-top: $gutter/2;
 }
 
 

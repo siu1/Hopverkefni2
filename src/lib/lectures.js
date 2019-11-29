@@ -120,13 +120,76 @@ export function readLecture(data) {
     headCategory.classList.add("heading__size1");
     head.appendChild(headCategory);
 
+    const page = document.querySelector(".lecture-page");
+
     data.content.forEach((obj) => {
+        console.log(obj.type);
         if(obj.type === "quote"){
           const quoteData = document.createElement('div');
-          quoteData.classList.add(lecture-page__quote);
+          quoteData.classList.add("lecture-page__quote");
           const quoteText = document.createElement('p');
-          quoteText.classList.add(lecture-page__quote__text);
-          quoteData.textContent = obj.data;
+          quoteText.classList.add("lecture-page__quote__text");
+          quoteText.textContent = obj.data;
+          quoteData.appendChild(quoteText);
+          if(obj.hasOwnProperty('attribute')) {
+            const attribute = document.createElement('p');
+            attribute.textContent = obj.attribute;
+            attribute.style.fontStyle = 'italic';
+            attribute.classList.add('lecture-page__quote__text');
+            quoteData.appendChild(attribute);
+          }
+
+          page.appendChild(quoteData);
+        } else if(obj.type === 'code') {
+          const codeData = document.createElement('div');
+          codeData.classList.add('lecture-page__code');
+          const codeText = document.createElement('p');
+          codeText.textContent = (obj.data).replace('\\n','<br>');
+          codeData.appendChild(codeText);
+          page.appendChild(codeData);
+        } else if(obj.type === 'list') {
+            const listData = document.createElement('ul');
+            listData.classList.add('lecture-page__list');
+            for(var i = 0; i < obj.data.length; i++) {
+                const listText = document.createElement('li');
+                listText.textContent = obj.data[i];
+                listData.appendChild(listText);
+            }
+            page.appendChild(listData);
+        } else if(obj.type === 'text') {//linebreak
+            const txtData = document.createElement('p');
+            txtData.classList.add('lecture-page__text');
+            txtData.textContent = (obj.data).replace('\\n','<br><br>');
+            console.log(txtData.textContent);
+            page.appendChild(txtData);
+        } else if(obj.type === "heading"){
+            const headingData = document.createElement('h2');
+            headingData.classList.add('lecture-page__heading', 'heading__size2');
+            headingData.textContent = obj.data;
+            page.appendChild(headingData);
+        } else if(obj.type === "youtube") {
+            const ytFrame = document.createElement('div');
+            const ytData = document.createElement('iframe');
+            ytFrame.classList.add('lecture-page__youtube');
+            ytData.src = obj.data;
+            console.log(ytData.src);
+            ytData.frameborder = '0';
+            ytData.allowfullscreen = '0';
+            ytFrame.appendChild(ytData);
+            page.appendChild(ytFrame);
+        } else if(obj.type === "image"){
+            const ourImg = document.createElement('div');
+            const imgData = document.createElement('img');
+            ourImg.classList.add('lecture-page__image');
+            imgData.src = '../'.concat(obj.data);
+            ourImg.appendChild(imgData);
+            //ehv til að sja hvaða mynd
+            if(obj.hasOwnProperty('caption')){
+                const imgCaption = document.createElement('p');
+                imgCaption.textContent = obj.caption;
+                ourImg.appendChild(imgCaption);
+            }
+            page.appendChild(ourImg);
         }
     });
 }
