@@ -34,12 +34,14 @@ function load(data) {
     console.log(selected);
     data.forEach((obj) => {
         if(!selected.length || selected.includes(obj.category)) {
-            //if(obj.thumbnail == null) {
-              const ourThumbnail = document.createElement('img');
+            const ourThumbnail = document.createElement('img');
+            if(obj.hasOwnProperty("thumbnail")) {
               ourThumbnail.src = obj.thumbnail;
               ourThumbnail.classList.add('lecturebox__image');
-            //}
-
+            } else {
+              //ourThumbnail.src = "img/thumb9.jpg";
+              ourThumbnail.classList.add('lecturebox__fakeImage');  
+            }
 
             const firstHeading = document.createElement('div');
             firstHeading.classList.add('heading', 'heading__size1');

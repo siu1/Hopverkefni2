@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    text-align: center;
+    //text-align: center;
 
 
     &__card {
@@ -14,7 +14,7 @@
       align-items: baseline;
       margin: $gutter/2;
       display: table;
-      height: 300px;
+      max-height: 300px;
   
       background-color: #ccc;
 
@@ -30,7 +30,14 @@
 
 
     &__image {
-      //width: 100%;
+      width: 100%;
+      height: auto;
+      max-height: 250px;
+    }
+
+    &__fakeImage {
+        width: 100%;
+        height: 100%;
     }
 
 
