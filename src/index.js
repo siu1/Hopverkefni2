@@ -1,4 +1,3 @@
-import List from './lib/list';
 import init, { lectureJSON } from './lib/lectures';
 
 document.addEventListener('DOMContentLoaded', () => {

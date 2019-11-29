@@ -1,11 +1,12 @@
-import { el, empty, arrayRemove, arrayAdd, loadStorage, save, clear } from './helpers';
+import {
+  el, empty, arrayRemove, arrayAdd, loadStorage, save,
+} from './helpers';
 
 let selected = [];
 
 let htmlButton;
 let cssButton;
 let jsButton;
-let finished = 'Klára Fyrirlestur';
 
 export default function init() {
     htmlButton = document.querySelector('#html-button');
@@ -58,7 +59,7 @@ function load(data) {
             if(obj.hasOwnProperty("thumbnail")) {
               ourThumbnail.src = obj.thumbnail;
             }
-            
+
             ourThumbnail.classList.add('lecturebox__image');
 
             const firstHeading = document.createElement('div');

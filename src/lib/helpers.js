@@ -21,11 +21,7 @@ export function el(name, ...children) {
 }
 
 export function arrayRemove(arr, value) {
-
-  return arr.filter(function(ele){
-      return ele != value;
-  });
-
+  return arr.filter((ele) => ele !== value);
 }
 
 export function arrayAdd(arr, value) {
@@ -35,7 +31,7 @@ export function arrayAdd(arr, value) {
 const LOCALSTORAGE_KEY = 'finished_lectures';
 
 export function loadStorage() {
-  let ourLectures = localStorage.getItem(LOCALSTORAGE_KEY);
+  const ourLectures = localStorage.getItem(LOCALSTORAGE_KEY);
   return JSON.parse(ourLectures);
 }
 
@@ -44,8 +40,8 @@ export function save(name) {
   if (!ourLectures) {
     ourLectures = [];
   }
-  if(!ourLectures.some((obj) => obj.title === name)) {
-    ourLectures.push({title : name,});
+  if (!ourLectures.some((obj) => obj.title === name)) {
+    ourLectures.push({ title: name });
   }
 
   const ourJSON = JSON.stringify(ourLectures);
