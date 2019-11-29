@@ -10,13 +10,15 @@ export default function init() {
     htmlButton = document.querySelector('#html-button');
     cssButton = document.querySelector('#css-button');
     jsButton = document.querySelector('#js-button');
+    const head = document.querySelector('.head');
+    head.style.backgroundImage = 'url("../img/header.jpg")';
     document.querySelector('#html-button').addEventListener('click', function(){selectedCheck('html');});
     document.querySelector('#css-button').addEventListener('click', function(){selectedCheck('css');});
     document.querySelector('#js-button').addEventListener('click', function(){selectedCheck('javascript');});
-    getJSON('/lectures.json');
+    titleJSON('/lectures.json');
 }
 
-async function getJSON(link) {
+async function titleJSON(link) {
   fetch(link)
     .then((result) => {
       if (result.ok) {
@@ -27,6 +29,24 @@ async function getJSON(link) {
     .then((data) => { load(data.lectures); })
     .catch(() => { console.log("error"); });
 }
+
+export async function lectureJSON() {
+    fetch('/lectures.json')
+      .then((result) => {
+        if (result.ok) {
+          return result.json();
+        }
+        throw new Error();
+      })
+      .then((data) => { data.lectures.forEach((obj) => {
+        if(obj.slug === (location.search).replace('?slug=','')) {
+            readLecture(obj);
+            return;
+        }
+      })
+    })
+      .catch(() => { console.log("error"); });
+  }
 
 function load(data) {
     const mainDocument = document.querySelector('.lecturebox');
@@ -55,6 +75,7 @@ function load(data) {
             ourCard.href = 'fyrirlestur.html?slug='.concat(obj.slug);
             ourCard.classList.add('lecturebox__card');
             mainDocument.appendChild(ourCard);
+
         }
     })
 }
@@ -85,5 +106,17 @@ function selectedCheck(value) {
       jsButton.classList.replace('button__inactive', 'button__active');
     }
   }
-  getJSON('/lectures.json');
+  titleJSON('/lectures.json');
+}
+
+
+export function readLecture(data) {
+    const head = document.querySelector('.head');
+    if(data.hasOwnProperty('image')){
+        head.style.backgroundImage = 'url("../'.concat(data.image,'")');
+    }
+
+    const headCategory = el('p', data.category);
+    headCategory.classList.add("heading__size1");
+    head.appendChild(headCategory);
 }

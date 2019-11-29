@@ -6,14 +6,13 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    //text-align: center;
+    text-align: center;
+    align-items: center;
 
 
     &__card {
       width: ($max-width + $gutter)/3 - $gutter;
-      align-items: baseline;
       margin: $gutter/2;
-      display: table;
       max-height: 300px;
   
       background-color: #ccc;
