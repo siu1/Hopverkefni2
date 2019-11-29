@@ -45,7 +45,6 @@ main { /* stylelint-disable-line */
 
 p{
   color: #000;
-  text-align: center;
 }
 
 
@@ -53,4 +52,5 @@ p{
 @import "lecturebox";
 @import "heading";
 @import "head";
+@import "lecture-page";
 // TODO import

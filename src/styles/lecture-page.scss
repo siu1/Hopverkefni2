@@ -1,0 +1,39 @@
+@import "config";
+
+.lecture-page{
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    &__youtube{
+        margin-bottom: $gutter * 2;
+    }
+    &__text{
+        margin-bottom: $gutter * 2;
+    }
+    &__quote{
+        background-color: #ccc;
+        width: 620px;
+        margin-bottom: $gutter * 2;
+        &__text{
+            margin: $gutter * 0.5;
+        }
+    }   
+    &__image{
+        width: 100%;
+        margin-bottom: $gutter * 2;
+    }
+    &__heading{
+        margin-bottom: $gutter * 2;
+    }
+    &__list{
+        margin-bottom: $gutter * 2;
+    }
+    &__code{
+        font-family: monospace;
+        white-space: pre-wrap;
+    }
+}
