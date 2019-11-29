@@ -67,13 +67,26 @@ function load(data) {
 
             const secondHeading = document.createElement('div');
             secondHeading.classList.add('heading', 'heading__size2');
-            secondHeading.textContent = obj.title;
+            secondHeading.textContent = obj.title
 
-            const ourCard = el('a', ourThumbnail, firstHeading, secondHeading);
+            const ourHeadings = el('div', firstHeading, secondHeading);
+            ourHeadings.classList.add('lecturebox__heading');
+
+            const ourCheckmark = document.createElement('div');
+            ourCheckmark.classList.add('heading', 'heading__size2');
+            let ourStorage = loadStorage();
+            if(ourStorage != null && ourStorage.some((obj1) => obj1.title === obj.title)) {
+                ourCheckmark.textContent = '✓';
+                ourCheckmark.style.color = '#2d2';
+            }
+
+            const lowerHalf = el('div', ourHeadings, ourCheckmark);
+            lowerHalf.classList.add('lecturebox__lower');
+
+            const ourCard = el('a', ourThumbnail, lowerHalf);
             ourCard.href = 'fyrirlestur.html?slug='.concat(obj.slug);
             ourCard.classList.add('lecturebox__card');
             mainDocument.appendChild(ourCard);
-
         }
     })
 }
@@ -112,7 +125,11 @@ export function readLecture(data) {
     const head = document.querySelector('.head');
     if(data.hasOwnProperty('image')){
         head.style.backgroundImage = 'url("../'.concat(data.image,'")');
+        const protection = document.createElement('div');
+        protection.classList.add('head__protection');
+        head.appendChild(protection);
     }
+
 
     const headCategory = el('p', data.category.toUpperCase());
     headCategory.classList.add("heading__size1");
@@ -144,7 +161,7 @@ export function readLecture(data) {
           const codeData = document.createElement('div');
           codeData.classList.add('lecture-page__code');
           const codeText = document.createElement('p');
-          codeText.textContent = (obj.data).replace('\\n','<br>');
+          codeText.innerText = obj.data;
           codeData.appendChild(codeText);
           page.appendChild(codeData);
         } else if(obj.type === 'list') {
@@ -159,7 +176,7 @@ export function readLecture(data) {
         } else if(obj.type === 'text') {
             const txtData = document.createElement('p');
             txtData.classList.add('lecture-page__text');
-            txtData.textContent = (obj.data).replace('\\n','<br><br>');
+            txtData.innerText = obj.data;
             page.appendChild(txtData);
         } else if(obj.type === "heading"){
             const headingData = document.createElement('h2');
@@ -193,7 +210,6 @@ export function readLecture(data) {
     const finishLecture = document.createElement('div');
     finishLecture.classList.add('lecture-page__link');
     let ourStorage = loadStorage();
-    console.log(ourStorage);
     if(ourStorage != null && ourStorage.some((obj) => obj.title === data.title)) {
       finishLecture.textContent = '✓ Fyrirlestur Kláraður';
       finishLecture.style.color = '#2d2';
