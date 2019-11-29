@@ -69,6 +69,7 @@ function load(data) {
 
             const secondHeading = document.createElement('div');
             secondHeading.classList.add('heading', 'heading__size2');
+            //const secondHeadingText = document.createElement('p');
             secondHeading.textContent = obj.title;
 
             const ourCard = el('a', ourThumbnail, firstHeading, secondHeading);
@@ -119,4 +120,14 @@ export function readLecture(data) {
     const headCategory = el('p', data.category);
     headCategory.classList.add("heading__size1");
     head.appendChild(headCategory);
+
+    data.content.forEach((obj) => {
+        if(obj.type === "quote"){
+          const quoteData = document.createElement('div');
+          quoteData.classList.add(lecture-page__quote);
+          const quoteText = document.createElement('p');
+          quoteText.classList.add(lecture-page__quote__text);
+          quoteData.textContent = obj.data;
+        }
+    });
 }
