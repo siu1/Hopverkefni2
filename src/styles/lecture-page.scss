@@ -1,58 +1,65 @@
 @import "config";
 
-.lecture-page{
-    display: flex;
-    max-width: ($max-width + $gutter)*2/3 + $gutter;
-    margin: 0 auto;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+.lecture-page {
+  display: flex;
+  max-width: ($max-width + $gutter) *2/3 + $gutter;
+  margin: 0 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 
-    &__youtube{
-        position: relative;
-        width:100%;
-        height:0;
-        padding-bottom: 56.25%;
-        margin: $gutter;
-    }
-    &__text{
-        margin: $gutter;
-        width: 100%;
-    }
-    &__quote{
-        background-color: #ccc;
-        width: 100%;
-        margin-bottom: $gutter;
-        &__text{
-            margin: $gutter;
-        }
-    }   
-    &__image{
-        width: 100%;
-        margin: $gutter;
-    }
-    &__heading{
-        margin: $gutter;
-        width: 100%;
-        font-family: $font-headers;
-    }
-    &__list{
-        list-style-position: outside;
-        margin-bottom: $gutter * 2;
-        margin: $gutter;
-    }
-    &__code{
-        font-family: $font-headers;
-        font-weight:bold;
-        margin: $gutter;
-        width: 100%;
-    }
+  &__youtube {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    margin: $gutter;
+  }
 
-    &__link {
-        font-family: $font-headers;
-        width:100%;
-        margin: $gutter;
-        text-align:center;
-        cursor: pointer;
+  &__text {
+    width: 100%;
+    margin: $gutter;
+  }
+
+  &__quote {
+    width: 100%;
+    background-color: #ccc;
+    margin-bottom: $gutter;
+
+    &__text {
+      margin: $gutter;
     }
+  }
+
+  &__image {
+    width: 100%;
+    margin: $gutter;
+  }
+
+  &__heading {
+    width: 100%;
+    margin: $gutter;
+    font-family: $font-headers;
+  }
+
+  &__list {
+    margin: $gutter;
+    margin-bottom: $gutter * 2;
+    list-style-position: outside;
+  }
+
+  &__code {
+    width: 100%;
+    margin: $gutter;
+    font-family: $font-headers;
+    font-weight: bold;
+  }
+
+  &__link {
+    width: 100%;
+    font-family: $font-headers;
+    margin: $gutter;
+    text-align: center;
+    cursor: pointer;
+  }
 }
