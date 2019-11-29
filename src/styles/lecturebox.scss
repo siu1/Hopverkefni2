@@ -6,14 +6,13 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    text-align: center;
-    align-items: center;
 
 
     &__card {
       width: ($max-width + $gutter)/3 - $gutter;
       margin: $gutter/2;
-      max-height: 300px;
+      //max-height: 300px;
+      min-height: 300px;
   
       background-color: #ccc;
 
@@ -30,13 +29,23 @@
 
     &__image {
       width: 100%;
-      height: auto;
-      max-height: 250px;
+      height: 250px;
+      //flex-grow: 1;
     }
 
-    &__fakeImage {
-        width: 100%;
-        height: 100%;
+    &__lower{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    &__heading {
+        width: 90%;
+    }
+
+    &__checkmark {
+        width: 10%;
     }
 
 

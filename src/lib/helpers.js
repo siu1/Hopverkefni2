@@ -31,3 +31,27 @@ export function arrayRemove(arr, value) {
 export function arrayAdd(arr, value) {
   return arr.concat([value]);
 }
+
+const LOCALSTORAGE_KEY = 'finished_lectures';
+
+export function loadStorage() {
+  let ourLectures = localStorage.getItem(LOCALSTORAGE_KEY);
+  return JSON.parse(ourLectures);
+}
+
+export function save(name) {
+  let ourLectures = loadStorage();
+  if (!ourLectures) {
+    ourLectures = [];
+  }
+  if(!ourLectures.some((obj) => obj.title === name)) {
+    ourLectures.push({title : name,});
+  }
+
+  const ourJSON = JSON.stringify(ourLectures);
+  localStorage.setItem(LOCALSTORAGE_KEY, ourJSON);
+}
+
+export function clear() {
+  localStorage.removeItem(LOCALSTORAGE_KEY);
+}

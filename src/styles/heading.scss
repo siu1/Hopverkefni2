@@ -4,14 +4,14 @@
   font-family: $font-headers;
   color: #000;
 
-  &__size1 {
-    z-index: 1;
-    font-size: 1rem;
-    font-weight: bold;
-  }
+    &__size1 {
+      font-size: 24px;
+      //font-weight: bold;
+      z-index: 1;
+    }
 
-  &__size2 {
-    font-size: 2rem;
-    font-weight: bold;
-  }
+    &__size2 {
+      font-size: 36px;
+      font-weight: bold;
+    }
 }
