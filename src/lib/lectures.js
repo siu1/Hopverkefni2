@@ -115,6 +115,9 @@ export function readLecture(data) {
     if(data.hasOwnProperty('image')){
         head.style.backgroundImage = 'url("../'.concat(data.image,'")');
     }
+    const protection = document.createElement('div');
+    protection.classList.add('head__protection');
+    head.appendChild(protection);
 
     const headCategory = el('p', data.category.toUpperCase());
     headCategory.classList.add("heading__size1");
@@ -144,7 +147,7 @@ export function readLecture(data) {
           const codeData = document.createElement('div');
           codeData.classList.add('lecture-page__code');
           const codeText = document.createElement('p');
-          codeText.textContent = (obj.data).replace('\\n','<br>');
+          codeText.innerText = obj.data;
           codeData.appendChild(codeText);
           page.appendChild(codeData);
         } else if(obj.type === 'list') {
@@ -156,10 +159,10 @@ export function readLecture(data) {
                 listData.appendChild(listText);
             }
             page.appendChild(listData);
-        } else if(obj.type === 'text') {//linebreak
+        } else if(obj.type === 'text') {
             const txtData = document.createElement('p');
             txtData.classList.add('lecture-page__text');
-            txtData.textContent = (obj.data).replace('\\n','<br><br>');
+            txtData.innerText = obj.data;
             console.log(txtData.textContent);
             page.appendChild(txtData);
         } else if(obj.type === "heading"){

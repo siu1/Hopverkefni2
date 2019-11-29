@@ -30,6 +30,7 @@ h1 { /* stylelint-disable-line */
   text-align: center;
   font-family: $font-headers;
   font-size:3rem;
+  z-index: 1;
 }
 
 main { /* stylelint-disable-line */
@@ -46,7 +47,6 @@ main { /* stylelint-disable-line */
 
 p{
   color: #000;
-  line-height: 32px;
 }
 
 a {
