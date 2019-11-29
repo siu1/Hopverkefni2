@@ -3,15 +3,15 @@
 .lecturebox {
     
     width: 100%;
+    margin: auto;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    text-align: left;
 
 
     &__card {
       width: ($max-width + $gutter)/3 - $gutter;
       margin: $gutter/2;
-      //max-height: 300px;
       min-height: 300px;
   
       background-color: #ccc;
