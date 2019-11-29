@@ -37,16 +37,21 @@ main { /* stylelint-disable-line */
   max-width: $max-width + $gutter;
   margin: 0 auto;
 
+
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-
 }
 
 p{
   color: #000;
   text-align: center;
 }
+
+a {
+  text-decoration: none;
+}
+
 
 
 @import "button";

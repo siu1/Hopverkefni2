@@ -1,20 +1,37 @@
 @import "config";
 
 .lecturebox {
-    width: ($max-width + $gutter)/3 - $gutter;
-    max-width: 100%;
-    margin-bottom: $gutter;
-    margin-top: $gutter;
-    align-content: left;
-    margin: $gutter/2;
+    
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
 
-    background-color: #ccc;
+
+    &__card {
+      width: ($max-width + $gutter)/3 - $gutter;
+      align-items: baseline;
+      margin: $gutter/2;
+      display: table;
+      height: 300px;
+  
+      background-color: #ccc;
+
+      transition:
+      color $transition,
+      background-color $transition;
+
+      &:hover {
+        background-color: #999;
+      }
+    }
+
+
 
     &__image {
-      width: 100%;
+      //width: 100%;
     }
 
-    &:hover {
-      background-color: #999;
-    }
+
 }

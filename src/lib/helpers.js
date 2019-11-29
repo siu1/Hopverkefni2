@@ -19,3 +19,15 @@ export function el(name, ...children) {
 
   return element;
 }
+
+export function arrayRemove(arr, value) {
+
+  return arr.filter(function(ele){
+      return ele != value;
+  });
+
+}
+
+export function arrayAdd(arr, value) {
+  return arr.concat([value]);
+}

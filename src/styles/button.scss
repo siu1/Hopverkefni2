@@ -1,28 +1,37 @@
 @import "config";
 
 .button{
-    display: block;
-
     width: 100%;
-    max-width: 200px;
-    padding:  10px 5px;
-    margin: 2*$gutter 2*$gutter;
+    text-align: center;
+
+    &__real {
+    transition:
+      color $transition,
+      background-color $transition,
+      border-color $transition;
+    
+    cursor: pointer;
+
+    padding:  10px $gutter;
+    margin: $gutter $gutter;
   
     font-family: $font-headers;
+    font-weight: bold;
     font-size: 1.5rem;
   
     color: #000;
     text-align: center;
-    text-decoration: none;
-  
-    cursor: pointer;
   
     border-style: solid;
     border-radius: 15px;
+    }
+
+
 
     &__active {
       background-color: #2d2;
       border-color: #2d2;
+      
       &:hover {
         background-color: #1a1;
         border-color: #1a1;
