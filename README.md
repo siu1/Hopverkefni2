@@ -1,8 +1,8 @@
 # Hópverkefni 2
 
 ## Höfundar:
-Andri Már Sigurðsson    ams59@hi.is
-Sindri Unnsteinsson     siu1@hi.is
+Andri Már Sigurðsson, netfang: ams59@hi.is
+Sindri Unnsteinsson, netfang: siu1@hi.is
 
 ## Uppsetning
 
