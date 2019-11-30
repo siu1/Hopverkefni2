@@ -21,7 +21,15 @@ Verkefninu er skipt í nokkrar möppur. Í rótarmöppunni eru tvö html skjöl,
 
 ## Keyrsla
 
-Til þess að keyra þetta verkefni skal klóna það og nota síðan browser-sync. Það er einnig hægt að skoða verkefnið á notendur.hi.is/siu1/vefforritun/Hopverkefni2.
+Til þess að keyra þetta verkefni skal klóna það og nota síðan browser-sync.
+Fyrst þarf að hafa rótarmöppuna opna í terminal og skrifa skipunina
+
+_npm run rollup_
+
+og síðan
+
+_npm run dev_.
+ Það er einnig hægt að skoða verkefnið á notendur.hi.is/siu1/vefforritun/Hopverkefni2.
 
 ## Verkefnislýsing
 
