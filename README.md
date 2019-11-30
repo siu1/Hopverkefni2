@@ -22,7 +22,11 @@ Verkefninu er skipt í nokkrar möppur. Í rótarmöppunni eru tvö html skjöl,
 ## Keyrsla
 
 Til þess að keyra þetta verkefni skal klóna það og nota síðan browser-sync.
-Fyrst þarf að hafa rótarmöppuna opna í terminal og skrifa skipunina
+Fyrst þarf að hafa rótarmöppuna opna í terminal og skrifa skipanirnar
+
+_npm install_ ,
+
+
 
 _npm run rollup_
 
