@@ -25,12 +25,12 @@ img { /* stylelint-disable-line */
 }
 
 h1 { /* stylelint-disable-line */
+  z-index: 1;
   margin: $gutter 0;
+  font-family: $font-headers;
+  font-size: 3rem;
   color: #000;
   text-align: center;
-  font-family: $font-headers;
-  font-size:3rem;
-  z-index: 1;
 }
 
 main { /* stylelint-disable-line */
@@ -39,39 +39,35 @@ main { /* stylelint-disable-line */
   max-width: $max-width + $gutter;
   margin: 0 auto;
 
-
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-  text-align: center;
 }
 
-p{
+p { /* stylelint-disable-line */
   color: #000;
+  white-space: pre-wrap;
 }
 
-a {
+a { /* stylelint-disable-line */
   text-decoration: none;
 }
 
-iframe {
+iframe { /* stylelint-disable-line */
   position: absolute;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 }
 
-li {
-  margin-bottom: $gutter/2;
+li { /* stylelint-disable-line */
   margin-top: $gutter/2;
+  margin-bottom: $gutter/2;
 }
-
-
 
 @import "button";
 @import "lecturebox";
 @import "heading";
 @import "head";
 @import "lecture-page";
-// TODO import
