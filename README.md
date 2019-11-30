@@ -26,10 +26,6 @@ Fyrst þarf að hafa rótarmöppuna opna í terminal og skrifa skipanirnar
 
 _npm install_ ,
 
-
-
-_npm run rollup_
-
 og síðan
 
 _npm run dev_
