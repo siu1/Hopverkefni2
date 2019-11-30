@@ -23,8 +23,8 @@
 
   &__quote {
     width: 100%;
-    background-color: #ccc;
     margin-bottom: $gutter;
+    background-color: #ccc;
 
     &__text {
       margin: $gutter;
@@ -57,8 +57,8 @@
 
   &__link {
     width: 100%;
-    font-family: $font-headers;
     margin: $gutter;
+    font-family: $font-headers;
     text-align: center;
     cursor: pointer;
   }
