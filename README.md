@@ -28,14 +28,13 @@ _npm run rollup_
 
 og síðan
 
-_npm run dev_.
+_npm run dev_
+
  Það er einnig hægt að skoða verkefnið á notendur.hi.is/siu1/vefforritun/Hopverkefni2.
 
 ## Verkefnislýsing
 
 Hér fyrir neðan er síðan verkefnislýsing verkefnisins sem unnið var eftir.
-
-# 
 
 Verkefnið felst í því að smíða prótótýpu af fyrirlestravef fyrir vefforritun. Gefin eru gögn sem unnin eru uppúr námsefni vetrarins.
 
