@@ -1,49 +1,24 @@
 @import "config";
 
 .lecturebox {
-    
-    width: 100%;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    text-align: left;
-
-    @media(max-width: 800px) {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
   display: flex;
   width: 100%;
-  flex-wrap: wrap;
   margin: auto;
+  flex-wrap: wrap;
   text-align: left;
 
   &__card {
     width: ($max-width + $gutter)/3 - $gutter;
     min-height: 300px;
     margin: $gutter/2;
-
-      /*@media(max-width: 800px) {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        /*margin: auto;
-        margin-bottom: $gutter/2;
-        flex-direction: column;
-      }*/
-
-      transition:
-      color $transition,
-      background-color $transition;
-
-      &:hover {
-        background-color: #999;
-      }
-    }
     background-color: #ccc;
+    @media (max-width: 1240px) {
+      margin: auto;
+      margin-top: $gutter/2;
+      margin-bottom: $gutter/2;
+      flex-direction: column;
+      justify-content: center;
+    }
 
     transition: color $transition, background-color $transition;
 
