@@ -8,6 +8,12 @@
     flex-wrap: wrap;
     text-align: left;
 
+    @media(max-width: 800px) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
     &__card {
       width: ($max-width + $gutter)/3 - $gutter;
@@ -15,6 +21,16 @@
       min-height: 300px;
   
       background-color: #ccc;
+
+      /*@media(max-width: 800px) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        /*margin: auto;
+        margin-bottom: $gutter/2;
+        flex-direction: column;
+      }*/
 
       transition:
       color $transition,
