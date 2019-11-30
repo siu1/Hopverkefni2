@@ -1,5 +1,33 @@
 # Hópverkefni 2
 
+## Höfundar:
+Andri Már Sigurðsson    ams59@hi.is
+Sindri Unnsteinsson     siu1@hi.is
+
+## Uppsetning
+
+Verkefninu er skipt í nokkrar möppur. Í rótarmöppunni eru tvö html skjöl, Index.html og Fyrirlestur.html. Þetta eru einu html skjöl sem vinna skal með.
+Þar eru einnig skjöl sem hjálpa til við stýlingu forritsins og node.js virkni.
+Þar eru síðan _demo.mp4_, sem er myndband sem sýnir nokkurn vegin hvernig miðað var við að verkefnið virki, _grid.css_, sem hjálpaði til við útlitshönnun verkefnisins og síðan _lectures.json_, skjal sem inniheldur öll fyrirlestrargögn sem birta skal.
+
+Í möppunni _img_ eru allar myndir sem birtar eru í verkefninu og í möppunni _utlit_ eru myndir sem notaðar voru sem viðmið um útlit verkefnisins.
+
+Í möppunni _src_ er svo mest öll virkni verkefnisins framkvæmd. _src/index.js_ skoðar einfaldlega hvort við séum að skoða forsíðuna eða hvort við séum inní fyrirlestri og kallar þá á föll sem vinna úr þeim upplýsingum.
+
+Í möppunni _src/lib_ eru þrjú javascript skjöl. _helpers.js_ inniheldur aðeins hjálparföll sem hinar skrárnar nýta sér. _lectures.js_ inniheldur alla virkni bakvið forsíðuna og _present.js_ inniheldur alla virkni bakvið síðuna þar sem lesið er fyrirlestra. 
+
+Í möppunni _src/styles_ eru allar scss skrárnar okkar. _button.scss_ sér um takkana á forsíðunni og svæðið í kringum þá. _config.scss_ inni heldur nokkrar grunneiningar sem hin _scss_ skjlin nýta sér. _head.scss_ sér um headers og _heading.scss_ sér um tegundir fyrirsagna. _lecture-page.scss_ sér um allt útlit á fyrirlestrasíðunni. _lecturebox.scss_ sér um kassana (og svæðið í kringum þá) á foríðunni sem innihalda smá upplýsingar um fyrirlestur og virka sem link á þann fyrirlestur. Að lokum er _styles.scss_ sem inniheldur nokkrar grunnstýlingar.
+
+## Keyrsla
+
+Til þess að keyra þetta verkefni skal klóna það og nota síðan browser-sync. Það er einnig hægt að skoða verkefnið á notendur.hi.is/siu1/vefforritun/Hopverkefni2.
+
+## Verkefnislýsing
+
+Hér fyrir neðan er síðan verkefnislýsing verkefnisins sem unnið var eftir.
+
+# 
+
 Verkefnið felst í því að smíða prótótýpu af fyrirlestravef fyrir vefforritun. Gefin eru gögn sem unnin eru uppúr námsefni vetrarins.
 
 Gefnar eru [fyrirmyndir](utlit/) í `500px` og `1500px` án grindar ásamt `1500px` með grind. Allt efni skal skalast snyrtilega á milli.

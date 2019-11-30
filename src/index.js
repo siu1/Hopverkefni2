@@ -1,4 +1,5 @@
-import init, { lectureJSON } from './lib/lectures';
+import init from './lib/lectures';
+import lectureJSON from './lib/present';
 
 document.addEventListener('DOMContentLoaded', () => {
   const page = document.querySelector('main');
