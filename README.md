@@ -2,6 +2,7 @@
 
 ## Höfundar:
 Andri Már Sigurðsson, netfang: ams59@hi.is
+
 Sindri Unnsteinsson, netfang: siu1@hi.is
 
 ## Uppsetning
